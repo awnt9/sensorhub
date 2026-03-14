@@ -9,10 +9,13 @@ dev:
 # ── Tests ──────────────────────────────────────────────────────────────────────
 
 test:
-    uv run pytest tests/ -v
+    uv run pytest tests/unit/ -v
+
+test-integration:
+    uv run pytest tests/integration/ -v
 
 test-cov:
-    uv run pytest tests/ -v --cov=sensorhub --cov-report=term-missing
+    uv run pytest tests/unit/ -v --cov=sensorhub --cov-report=term-missing
 
 # ── Lint & format ──────────────────────────────────────────────────────────────
 
